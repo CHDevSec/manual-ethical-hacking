@@ -394,8 +394,8 @@ class CTAHandlers {
         const buyButtons = document.querySelectorAll('.btn-buy');
         buyButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                e.preventDefault();
-                // alert('Redirecionando para o checkout do Hardening Linux... (Integração com sistema de pagamento)');
+                // e.preventDefault(); // <--- comenta ou apaga essa linha
+                // alert('Redirecionando para o checkout...');
             });
         });
     }
