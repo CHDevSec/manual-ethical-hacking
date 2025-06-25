@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Ethical Hacking - Domine a Cibersegurança | CHDEVSEC</title>
+    <meta name="description"
+        content="Aprenda Ethical Hacking do zero ao avançado. Manual completo com laboratório prático, ferramentas, vulnerabilidades e carreiras em cibersegurança. Preço de lançamento R$ 29,90!">
+    <meta name="keywords"
+        content="ethical hacking, cibersegurança, pentest, kali linux, owasp, segurança da informação, hacker ético, vulnerabilidades">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☠️</text></svg>">
+    <meta name="author" content="Caio Henrique - CHDEVSEC">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Manual de Ethical Hacking - Domine a Cibersegurança">
+    <meta property="og:description"
+        content="Aprenda Ethical Hacking do zero ao avançado. Manual completo com laboratório prático, ferramentas, vulnerabilidades e carreiras em cibersegurança.">
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Manual de Ethical Hacking - Domine a Cibersegurança">
+    <meta property="twitter:description"
+        content="Aprenda Ethical Hacking do zero ao avançado. Manual completo com laboratório prático, ferramentas, vulnerabilidades e carreiras em cibersegurança.">
+    <meta property="twitter:image" content="">
+
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <link rel="canonical" href="">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Manual de Ethical Hacking",
+        "description": "Guia completo para dominar o hacking ético e proteger o mundo digital. De iniciante a especialista com laboratório prático, ferramentas e certificações.",
+        "brand": {
+            "@type": "Brand",
+            "name": "CHDEVSEC"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "29.90",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2024-12-31"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Caio Henrique",
+            "jobTitle": "Especialista em Cibersegurança",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "CHDEVSEC"
+            }
+        },
+        "category": "Cibersegurança",
+        "keywords": ["ethical hacking", "cibersegurança", "pentest", "kali linux", "owasp", "segurança da informação"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Matrix Background Canvas -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>CHDEVSEC</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Início</a>
+                <a href="#benefits">Benefícios</a>
+                <a href="#investment">Investimento</a>
+                <a href="#about">Sobre</a>
+                <a href="#projects">Projetos</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">
+                    Manual <span class="highlight">Ethical Hacking</span>
+                </h1>
+                <p class="hero-subtitle fade-in">
+                    De iniciante a especialista: seu guia completo para dominar o hacking ético e proteger o mundo
+                    digital.
+                </p>
+                <div class="price-container fade-in">
+                    <div class="price-original">De R$ 79,90</div>
+                    <div class="price-current">Por apenas R$ 29,90</div>
+                    <div class="price-badge">PREÇO DE LANÇAMENTO</div>
+                </div>
+                <div class="cta-container fade-in">
+                    <button type="button" class="cta-button primary"
+                        onclick="window.location.href='https://payfast.greenn.com.br/123320'">
+                        <i class="fas fa-download"></i>
+                        Garantir Meu Manual Agora
+                    </button>
+                    <div class="guarantee">
+                        <i class="fas fa-shield-alt"></i>
+                        Acesso vitalício garantido
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">ethical_hacking.sh</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~#</span>
+                            <span class="command">nmap -sV target.com</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">Starting Nmap scan...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">22/tcp open ssh OpenSSH 7.4</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">80/tcp open http Apache 2.4.6</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">root@kali:~#</span>
+                            <span class="cursor">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title fade-in">O que você vai dominar com este manual:</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Fundamentos da Cibersegurança</h3>
+                    <p>Domine os princípios CIA (Confidencialidade, Integridade, Disponibilidade) e conceitos essenciais
+                        de segurança.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Tipos de Hackers e Ética</h3>
+                    <p>Entenda a diferença entre White, Black e Gray Hat hackers e as responsabilidades legais e morais.
+                    </p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Laboratório Hacker Completo</h3>
+                    <p>Monte seu ambiente seguro para praticar com Kali Linux, VMs e ferramentas profissionais.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Metodologias de Pentest</h3>
+                    <p>Aprenda OSSTMM e OWASP, desde reconhecimento até exploração e relatórios profissionais.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Vulnerabilidades e Exploração</h3>
+                    <p>Domine o OWASP Top 10 e tipos de ataques como SQLi, XSS, CSRF com exemplos práticos.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ferramentas Essenciais</h3>
+                    <p>Nmap, Burp Suite, Metasploit, Hydra e dezenas de outras ferramentas com guias práticos.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Carreiras em Cibersegurança</h3>
+                    <p>Red Team, Blue Team, Purple Team, GRC e certificações para impulsionar sua carreira.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Plano de Estudo Inteligente</h3>
+                    <p>Estratégias para aprendizado contínuo, comunidades e plataformas recomendadas.</p>
+                </div>
+            </div>
+            <div class="cta-container">
+                <button class="cta-button secondary" type="button"
+                    onclick="window.location.href='https://payfast.greenn.com.br/123320'">
+                    <i class="fas fa-rocket"></i>
+                    Transforme sua carreira agora!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section id="target" class="target">
+        <div class="container">
+            <h2 class="section-title fade-in">Este manual é para você que:</h2>
+            <div class="target-grid">
+                <div class="target-item fade-in">
+                    <div class="target-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <p>É <strong>iniciante em cibersegurança</strong> ou profissional de TI curioso pelo universo hacker
+                    </p>
+                </div>
+                <div class="target-item fade-in">
+                    <div class="target-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <p>Deseja <strong>migrar para a área</strong> de segurança da informação</p>
+                </div>
+                <div class="target-item fade-in">
+                    <div class="target-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <p>Está estudando para <strong>certificações</strong> (CEH, CompTIA Security+, OSCP)</p>
+                </div>
+                <div class="target-item fade-in">
+                    <div class="target-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <p>É estudante ou entusiasta que quer entender <strong>ataques de forma ética</strong></p>
+                </div>
+                <div class="target-item fade-in">
+                    <div class="target-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <p>Quer <strong>proteger seus dados</strong>, sistemas ou empresa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="investment">
+        <div class="container">
+            <div class="investment-content">
+                <h2 class="section-title fade-in">Invista no seu conhecimento, colha resultados reais</h2>
+                <p class="investment-text fade-in">
+                    A cibersegurança é uma das áreas que mais cresce no mundo, com salários que podem chegar a R$
+                    15.000+ mensais.
+                    Este investimento de apenas R$ 29,90 pode transformar completamente sua carreira e abrir portas para
+                    oportunidades incríveis.
+                </p>
+
+                <div class="investment-box fade-in">
+                    <div class="investment-header">
+                        <h3>Oferta Especial de Lançamento</h3>
+                        <div class="countdown-timer">
+                            <div class="timer-item">
+                                <span id="days">00</span>
+                                <label>Dias</label>
+                            </div>
+                            <div class="timer-item">
+                                <span id="hours">00</span>
+                                <label>Horas</label>
+                            </div>
+                            <div class="timer-item">
+                                <span id="minutes">00</span>
+                                <label>Min</label>
+                            </div>
+                            <div class="timer-item">
+                                <span id="seconds">00</span>
+                                <label>Seg</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-comparison">
+                        <div class="price-old">
+                            <span class="price-label">Preço Normal</span>
+                            <span class="price-value">R$ 79,90</span>
+                        </div>
+                        <div class="price-new">
+                            <span class="price-label">Preço de Lançamento</span>
+                            <span class="price-value">R$ 29,90</span>
+                            <span class="discount">62% OFF</span>
+                        </div>
+                    </div>
+
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Acesso vitalício ao conteúdo</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Atualizações futuras incluídas</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte via comunidade</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Estude no seu ritmo</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Roteiro prático com trilhas (Red, Blue, Purble, GRC)</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Aprenda na prática, Kali Linux e suas ferramentas.</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check"></i>
+                            <span>Mais de 10 plataforma pra acelerar seus estudos de Gratuito.</span>
+                        </div>
+                    </div>
+
+                    <button class="cta-button primary large" type="button"
+                        onclick="window.location.href='https://payfast.greenn.com.br/123320'">
+                        <i class="fas fa-credit-card"></i>
+                        Não perca essa oportunidade única!
+                    </button>
+
+                    <div class="security-badges">
+                        <div class="badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Compra 100% Segura</span>
+                        </div>
+                        <div class="badge">
+                            <i class="fas fa-undo"></i>
+                            <span>7 dias de garantia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Author Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="author-avatar">
+                        <div class="avatar-inner">
+                            <img src="Mockups/eu2.png" alt="Foto do autor" class="author-photo">
+                        </div>
+                    </div>
+                    <div class="author-badges">
+                        <div class="badge">6+ anos</div>
+                        <div class="badge">DevSecOps</div>
+                        <div class="badge">CorpSec</div>
+                        <div class="badge">Blue Team</div>
+                        <div class="badge">Read Team</div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h2 class="section-title fade-in">Conheça Caio Henrique: Seu Guia no Mundo da Cibersegurança</h2>
+                    <p class="fade-in">
+                        <strong>Caio Henrique</strong> é um especialista renomado em Cyber e Ethical Hacking, com mais
+                        de <strong>6 anos de experiência prática</strong> no campo.
+                        Atualmente, atua nas áreas de <strong>DevSecOps, DevSec e Blue Team</strong>, trazendo uma visão
+                        abrangente e atualizada das melhores práticas de segurança.
+                    </p>
+                    <p class="fade-in">
+                        Sua paixão é capacitar indivíduos a desvendarem os segredos da proteção digital, transformando
+                        conhecimento em poder.
+                        Com uma abordagem prática e didática, Caio já ajudou centenas de profissionais a ingressarem e
+                        evoluírem na área de cibersegurança.
+                    </p>
+                    <div class="expertise-list fade-in">
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Especialista em DevSecOps, Blue Team, Read Team e Automações Hacking</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>6+ anos de experiência em Cibersegurança</span>
+                        </div>
+                        <div class="expertise-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Abordagem prática e didática</span>
+                        </div>
+                    </div>
+                    <button class="cta-button secondary" type="button"
+                        onclick="window.location.href='https://payfast.greenn.com.br/123320'">
+                        <i class="fas fa-user-check"></i>
+                        Aprenda com quem faz!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Explore outros projetos CHDEVSEC:</h2>
+            <p class="section-subtitle fade-in">Expanda seus conhecimentos e habilidades com mais conteúdo exclusivo.
+            </p>
+
+            <div class="projects-grid">
+                <!-- Project 1: Hardening Linux -->
+                <div class="project-card available fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <div class="project-status available">
+                            <i class="fas fa-check-circle"></i>
+                            Disponível
+                        </div>
+                    </div>
+                    <h3>Hardening Linux: Automações e E-book</h3>
+                    <p>E-book completo e automações para fortalecer a segurança de sistemas Linux com técnicas avançadas
+                        de hardening.</p>
+                    <div class="project-price">R$ 49,90</div>
+                    <div class="project-actions">
+                        <a href="https://payfast.greenn.com.br/118198" class="btn-buy" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </a>
+                        </button>
+                        <button class="btn-details" data-project="hardening">
+                            <i class="fas fa-info-circle"></i>
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Ferramentas de Hacking -->
+                <div class="project-card locked fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="project-status locked">
+                            <i class="fas fa-lock"></i>
+                            Em Desenvolvimento
+                        </div>
+                    </div>
+                    <h3>Ferramentas de Hacking</h3>
+                    <p>Coleção completa de ferramentas customizadas para pentest e ethical hacking com guias detalhados
+                        de uso.</p>
+                    <div class="project-price">Em breve</div>
+                    <div class="project-actions">
+                        <button class="btn-locked" disabled>
+                            <i class="fas fa-lock"></i>
+                            Indisponível
+                        </button>
+                        <button class="btn-details" data-project="tools">
+                            <i class="fas fa-info-circle"></i>
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Automações e Scripts -->
+                <div class="project-card locked fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="project-status locked">
+                            <i class="fas fa-lock"></i>
+                            Em Desenvolvimento
+                        </div>
+                    </div>
+                    <h3>Automações e Scripts</h3>
+                    <p>Scripts e automações para agilizar tarefas de segurança, monitoramento e análise de
+                        vulnerabilidades.</p>
+                    <div class="project-price">Em breve</div>
+                    <div class="project-actions">
+                        <button class="btn-locked" disabled>
+                            <i class="fas fa-lock"></i>
+                            Indisponível
+                        </button>
+                        <button class="btn-details" data-project="scripts">
+                            <i class="fas fa-info-circle"></i>
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4: E-book Profissional CH|E -->
+                <div class="project-card locked fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-status locked">
+                            <i class="fas fa-lock"></i>
+                            Em Desenvolvimento
+                        </div>
+                    </div>
+                    <h3>E-book Profissional de Ethical Hacking (CH|E)</h3>
+                    <p>Conteúdo avançado baseado na certificação CH|E (Certified Ethical Hacker) para profissionais
+                        experientes.</p>
+                    <div class="project-price">Em breve</div>
+                    <div class="project-actions">
+                        <button class="btn-locked" disabled>
+                            <i class="fas fa-lock"></i>
+                            Indisponível
+                        </button>
+                        <button class="btn-details" data-project="che">
+                            <i class="fas fa-info-circle"></i>
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title fade-in">Perguntas Frequentes</h2>
+            <p class="section-subtitle fade-in">Tire suas dúvidas sobre o Manual de Ethical Hacking</p>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Quando eu recebo o Manual de Ethical Hacking?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Após a confirmação do pagamento, o acesso ao Manual de Ethical Hacking é liberado
+                            imediatamente. Você receberá um e-mail com as instruções para acessar o conteúdo digital,
+                            que pode ser baixado ou visualizado online a qualquer momento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Como posso pagar pelo Manual de Ethical Hacking?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceitamos diversas formas de pagamento para sua conveniência e segurança, incluindo cartão de
+                            crédito (parcelamento em até 12x), boleto bancário e PIX. Todas as transações são
+                            processadas por uma plataforma segura para garantir a proteção dos seus dados.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Como funciona o estudo com o Manual de Ethical Hacking?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O Manual de Ethical Hacking foi desenvolvido para ser um guia completo, do básico ao
+                            avançado. Ele inclui explicações teóricas, exemplos práticos, laboratórios para você montar
+                            seu ambiente de testes e sugestões de ferramentas. Você pode estudar no seu próprio ritmo,
+                            revisitando os tópicos sempre que precisar. Além disso, terá acesso a uma comunidade de
+                            suporte para tirar dúvidas e trocar experiências.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>O manual é adequado para iniciantes?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! O manual foi criado especialmente para quem está começando na área de cibersegurança.
+                            Começamos com os conceitos fundamentais e evoluímos gradualmente para tópicos mais
+                            avançados, sempre com explicações claras e exemplos práticos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Preciso de conhecimento prévio em programação?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não é obrigatório, mas conhecimentos básicos em programação e redes podem ajudar. O manual
+                            inclui explicações sobre os conceitos necessários e sugestões de recursos para aprofundar
+                            seu conhecimento quando necessário.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Há suporte disponível após a compra?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! Você terá acesso a uma comunidade exclusiva onde pode tirar dúvidas, compartilhar
+                            experiências e receber orientações. Além disso, o manual recebe atualizações regulares sem
+                            custo adicional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>CHDEVSEC</h3>
+                    <p>Especialistas em Cibersegurança e Ethical Hacking</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/CHDevSec" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Links Úteis</h4>
+                        <ul>
+                            <li><a href="#" onclick="openTermsModal(); return false;">Termos de Uso</a></li>
+                            <li><a href="#" onclick="openPrivacyModal(); return false;">Política de Privacidade</a></li>
+                            <li><a href="https://www.instagram.com/chdevsec/" target="_blank"
+                                    rel="noopener noreferrer">Suporte</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CHDEVSEC. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Detalhes do Projeto</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modal-content-text">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Termos de Uso</h3>
+                <span class="modal-close" onclick="closeTermsModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="terms-content">
+                    <h4>1. Aceitação dos Termos</h4>
+                    <p>Ao adquirir e utilizar o Manual de Ethical Hacking da CHDEVSEC, você concorda com os termos e
+                        condições estabelecidos neste documento.</p>
+
+                    <h4>2. Uso do Conteúdo</h4>
+                    <p>O conteúdo do Manual de Ethical Hacking é destinado exclusivamente para fins educacionais e de
+                        aprendizado em cibersegurança. É proibido o uso das informações para atividades ilegais ou
+                        maliciosas.</p>
+
+                    <h4>3. Propriedade Intelectual</h4>
+                    <p>Todo o conteúdo do manual, incluindo textos, imagens, códigos e metodologias, é propriedade da
+                        CHDEVSEC e está protegido por direitos autorais. É proibida a reprodução, distribuição ou
+                        comercialização sem autorização prévia.</p>
+
+                    <h4>4. Responsabilidade do Usuário</h4>
+                    <p>O usuário é inteiramente responsável pelo uso das informações contidas no manual. A CHDEVSEC não
+                        se responsabiliza por danos decorrentes do uso inadequado das técnicas apresentadas.</p>
+
+                    <h4>5. Limitação de Responsabilidade</h4>
+                    <p>A CHDEVSEC não garante que as informações estejam sempre atualizadas ou livres de erros. O uso do
+                        manual é por conta e risco do usuário.</p>
+
+                    <h4>6. Modificações</h4>
+                    <p>Estes termos podem ser modificados a qualquer momento. As alterações entrarão em vigor
+                        imediatamente após a publicação.</p>
+
+                    <h4>7. Lei Aplicável</h4>
+                    <p>Estes termos são regidos pelas leis brasileiras. Qualquer disputa será resolvida no foro da
+                        comarca de São Paulo/SP.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Política de Privacidade</h3>
+                <span class="modal-close" onclick="closePrivacyModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="privacy-content">
+                    <h4>1. Informações Coletadas</h4>
+                    <p>Coletamos apenas as informações necessárias para processar sua compra e fornecer suporte,
+                        incluindo nome, e-mail e dados de pagamento.</p>
+
+                    <h4>2. Uso das Informações</h4>
+                    <p>Suas informações são utilizadas exclusivamente para:</p>
+                    <ul>
+                        <li>Processar e confirmar sua compra</li>
+                        <li>Enviar o acesso ao conteúdo adquirido</li>
+                        <li>Fornecer suporte técnico quando solicitado</li>
+                        <li>Enviar atualizações sobre o produto (opcional)</li>
+                    </ul>
+
+                    <h4>3. Compartilhamento de Dados</h4>
+                    <p>Não compartilhamos, vendemos ou alugamos suas informações pessoais para terceiros, exceto quando
+                        necessário para processar pagamentos através de nossas plataformas parceiras seguras.</p>
+
+                    <h4>4. Segurança dos Dados</h4>
+                    <p>Utilizamos medidas de segurança adequadas para proteger suas informações contra acesso não
+                        autorizado, alteração, divulgação ou destruição.</p>
+
+                    <h4>5. Cookies</h4>
+                    <p>Nosso site pode utilizar cookies para melhorar sua experiência de navegação. Você pode
+                        desabilitar os cookies nas configurações do seu navegador.</p>
+
+                    <h4>6. Seus Direitos</h4>
+                    <p>Você tem o direito de acessar, corrigir ou excluir suas informações pessoais. Entre em contato
+                        conosco através dos canais de suporte para exercer esses direitos.</p>
+
+                    <h4>7. Alterações na Política</h4>
+                    <p>Esta política pode ser atualizada periodicamente. Recomendamos que você a revise regularmente
+                        para se manter informado sobre como protegemos suas informações.</p>
+
+                    <h4>8. Contato</h4>
+                    <p>Para questões relacionadas à privacidade, entre em contato através do nosso Instagram @chdevsec
+                        ou GitHub.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
