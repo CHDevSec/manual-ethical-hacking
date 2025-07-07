@@ -679,15 +679,18 @@ section {
 
 .benefit-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
     color: var(--text-secondary);
+    word-break: break-word;
 }
 
 .benefit-item i {
     color: var(--accent-tertiary);
     font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 3px;
 }
 
 /* Security Badges */
@@ -1190,6 +1193,15 @@ section {
     .project-actions {
         flex-direction: column;
     }
+
+    .investment-box {
+        padding: var(--spacing-md);
+        max-width: 98vw;
+    }
+
+    .price-new .price-value {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1209,6 +1221,22 @@ section {
     .modal-content {
         width: 95%;
         margin: 10% auto;
+    }
+
+    .benefit-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.5rem;
+        word-break: break-word;
+    }
+    .benefit-item i {
+        margin-bottom: 0;
+        margin-top: 6px;
+    }
+    .benefit-item span, .benefit-item p {
+        text-align: left !important;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -1515,5 +1543,37 @@ section {
     .video .section-title {
         font-size: 2em;
     }
+}
+
+/* Remover estilos pixelart e glitch adicionados anteriormente */
+.section-title, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    letter-spacing: normal;
+}
+
+.cta-button, .price-badge, .guarantee, .timer-item span, .discount {
+    font-family: var(--font-primary);
+}
+
+.pixel-detail, .pixel-effect, .glitch {
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: normal;
+    color: inherit;
+    text-shadow: none;
+    animation: none;
+}
+
+.cta-button, .investment-box, .modal-content {
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: var(--border-color) !important;
+    box-shadow: none;
+}
+
+.pixel-icon {
+    image-rendering: auto;
+    filter: none;
 }
 
