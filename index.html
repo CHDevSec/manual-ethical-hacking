@@ -1,0 +1,799 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Ethical Hacking | CHDEVSEC</title>
+    <meta name="description"
+        content="Aprenda Ethical Hacking na prática. Guia direto ao ponto, do zero ao prático, com ferramentas reais.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Jersey+20&family=JetBrains+Mono:wght@400;700&family=Pequeno5&family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon - Escudo Pixel Art RPG -->
+    <link rel="icon" type="image/png" href="assets/public/icons/fc665.png">
+    <link rel="apple-touch-icon" href="assets/public/icons/fc665.png">
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN - Retro Game Style -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <!-- Logo pixelado -->
+            <div class="loading-logo">CHDEVSEC</div>
+
+            <!-- Texto de loading com digitação -->
+            <div class="loading-text">
+                <span class="loading-label"></span><span class="loading-cursor">_</span>
+            </div>
+
+            <!-- Barra de progresso pixel -->
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+
+            <!-- Dica de loading -->
+            <div class="loading-tip">Press any key to continue...</div>
+        </div>
+    </div>
+
+    <!-- 7.1 HERO SECTION - RETRO REFACTOR -->
+    <header class="hero">
+        <div class="container hero-grid">
+            <!-- Left Column: Text Content -->
+            <div class="hero-text">
+                <div class="glitch-wrapper">
+                    <h1 class="hero-title">
+                        <span class="glitch" data-text="ETHICAL HACKING,">ETHICAL HACKING,</span>
+                        <span class="headline-sub">DO JEITO CERTO.</span>
+                    </h1>
+                </div>
+
+                <div class="system-line">
+                    <span class="prompt">[SYSTEM]</span>
+                    <span class="message">READY FOR PRACTICE</span>
+                </div>
+
+                <a href="https://payfast.greenn.com.br/123320" class="cta-button big pixel-btn">
+                    <span class="cmd-icon">></span> ./START_HACKING.SH<span class="cursor-blink">_</span>
+                </a>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-val">100%</span>
+                        <span class="stat-label">PRÁTICO</span>
+                    </div>
+                    <div class="stat-sep">|</div>
+                    <div class="stat-item">
+                        <span class="stat-val">07</span>
+                        <span class="stat-label">DIAS GARANTIA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Manual Cover -->
+            <div class="hero-visual">
+                <div class="manual-container">
+                    <div class="manual-wrapper">
+                        <span class="badge-hacker-ready">HACKER READY</span>
+                        <img src="Mockups/capa_manual.png" alt="Manual Ethical Hacking Capa" class="manual-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOLS CAROUSEL -->
+        <div class="hero-tools-marquee">
+            <div class="marquee-track">
+                <!-- Set 1: Ferramentas Reais de Hacking -->
+                <div class="tool-item" title="Wireshark">
+                    <img src="assets/icons_hacking/wireshark-logo.png" alt="Wireshark">
+                </div>
+                <div class="tool-item" title="Burp Suite">
+                    <img src="assets/icons_hacking/burpsuite-logo.png" alt="Burp Suite">
+                </div>
+                <div class="tool-item" title="Nmap">
+                    <img src="assets/icons_hacking/nmap_logo.png" alt="Nmap">
+                </div>
+                <div class="tool-item" title="Metasploit">
+                    <img src="assets/icons_hacking/metasploit-framework-logo.png" alt="Metasploit">
+                </div>
+                <div class="tool-item" title="Hydra">
+                    <img src="assets/icons_hacking/hydra-logo.png" alt="Hydra">
+                </div>
+                <div class="tool-item" title="John the Ripper">
+                    <img src="assets/icons_hacking/john-logo.png" alt="John the Ripper">
+                </div>
+                <div class="tool-item" title="Aircrack-ng">
+                    <img src="assets/icons_hacking/aircrack-ng-logo.png" alt="Aircrack-ng">
+                </div>
+                <div class="tool-item" title="Gobuster">
+                    <img src="assets/icons_hacking/gobuster-logo.png" alt="Gobuster">
+                </div>
+                <div class="tool-item" title="Nikto">
+                    <img src="assets/icons_hacking/nikto-logo.png" alt="Nikto">
+                </div>
+                <div class="tool-item" title="SQLMap">
+                    <img src="assets/icons_hacking/sqlmap.png" alt="SQLMap">
+                </div>
+                <div class="tool-item" title="Nuclei">
+                    <img src="assets/icons_hacking/nuclei-logo.png" alt="Nuclei">
+                </div>
+                <div class="tool-item" title="Kali Linux">
+                    <img src="assets/icons_hacking/Kali-dragon-icon.svg.png" alt="Kali Linux">
+                </div>
+
+                <!-- Set 2: Duplicate for seamless infinite loop -->
+                <div class="tool-item" title="Wireshark">
+                    <img src="assets/icons_hacking/wireshark-logo.png" alt="Wireshark">
+                </div>
+                <div class="tool-item" title="Burp Suite">
+                    <img src="assets/icons_hacking/burpsuite-logo.png" alt="Burp Suite">
+                </div>
+                <div class="tool-item" title="Nmap">
+                    <img src="assets/icons_hacking/nmap_logo.png" alt="Nmap">
+                </div>
+                <div class="tool-item" title="Metasploit">
+                    <img src="assets/icons_hacking/metasploit-framework-logo.png" alt="Metasploit">
+                </div>
+                <div class="tool-item" title="Hydra">
+                    <img src="assets/icons_hacking/hydra-logo.png" alt="Hydra">
+                </div>
+                <div class="tool-item" title="John the Ripper">
+                    <img src="assets/icons_hacking/john-logo.png" alt="John the Ripper">
+                </div>
+                <div class="tool-item" title="Aircrack-ng">
+                    <img src="assets/icons_hacking/aircrack-ng-logo.png" alt="Aircrack-ng">
+                </div>
+                <div class="tool-item" title="Gobuster">
+                    <img src="assets/icons_hacking/gobuster-logo.png" alt="Gobuster">
+                </div>
+                <div class="tool-item" title="Nikto">
+                    <img src="assets/icons_hacking/nikto-logo.png" alt="Nikto">
+                </div>
+                <div class="tool-item" title="SQLMap">
+                    <img src="assets/icons_hacking/sqlmap.png" alt="SQLMap">
+                </div>
+                <div class="tool-item" title="Nuclei">
+                    <img src="assets/icons_hacking/nuclei-logo.png" alt="Nuclei">
+                </div>
+                <div class="tool-item" title="Kali Linux">
+                    <img src="assets/icons_hacking/Kali-dragon-icon.svg.png" alt="Kali Linux">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 7.2 PROPOSTA DE VALOR -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="pixel-quote">Um guia prático de Ethical Hacking para quem quer entrar ou evoluir em Cybersecurity
+                — com prática real, sem teoria desnecessária.</h2>
+        </div>
+    </section>
+
+    <!-- 7.3 DOR -> SOLUÇÃO -->
+    <section class="pain-solution">
+        <div class="container">
+            <h2 class="section-title shiny-pixel-title" data-text="Chega de estudar errado">Chega de estudar errado</h2>
+            <div class="comparison-grid">
+                <!-- SLOT 01: Caminho Errado -->
+                <div class="pain-card slot-card">
+                    <div class="slot-header">
+                        <span class="slot-label">[SLOT 01]</span>
+                        <h3>O JEITO COMUM</h3>
+                    </div>
+                    <ul class="slot-list">
+                        <li>Informação demais</li>
+                        <li>Sem direção</li>
+                        <li>Zero progresso</li>
+                    </ul>
+                </div>
+
+                <!-- SLOT 01: Caminho Certo -->
+                <div class="solution-card slot-card">
+                    <div class="slot-header">
+                        <span class="slot-label">[SLOT 01]</span>
+                        <h3>COM O MANUAL</h3>
+                    </div>
+                    <ul class="slot-list">
+                        <li>Caminho claro</li>
+                        <li>Prática real</li>
+                        <li>Evolução contínua</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Animação Pixelart: Batalha Simbólica (Sem Método = Derrota) -->
+            <!-- Fim da comparação -->
+        </div>
+    </section>
+    </div>
+    </section>
+
+    <!-- 7.4 COMO FUNCIONA -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title shiny-pixel-title" data-text="Como você vai aprender">Como você vai aprender</h2>
+            <div class="section-subtitle-line">
+                <span class="system-tag">[SYSTEM]</span>
+                <span class="system-msg">progresso guiado do zero à prática real</span>
+            </div>
+            <div class="steps-grid">
+                <div class="step step-1">
+                    <div class="step-number">01</div>
+                    <h3>Prepare seu ambiente</h3>
+                    <p>Entenda os fundamentos e configure seu laboratório seguro.</p>
+                </div>
+                <div class="step step-2">
+                    <div class="step-number">02</div>
+                    <h3>Pratique técnicas reais</h3>
+                    <p>Use ferramentas de mercado em cenários controlados.</p>
+                </div>
+                <div class="step step-3">
+                    <div class="step-number">03</div>
+                    <h3>Aplique com confiança</h3>
+                    <p>Domine a mentalidade hacker para proteger sistemas reais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.5 BENEFÍCIOS -->
+    <section class="benefits">
+        <!-- Matrix Rain Canvas Background -->
+        <canvas id="matrix-rain" class="matrix-canvas"></canvas>
+
+        <div class="container">
+            <h2 class="benefits-title shiny-pixel-title" data-text="O QUE VOCÊ GANHA">O QUE VOCÊ GANHA</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <img src="assets/public/icons/fc1695.png" alt="" class="benefit-icon">
+                    <div class="benefit-content">
+                        <h3>Ferramentas Reais</h3>
+                        <p>Aprenda a usar Nmap, Burp Suite e Kali Linux como no mercado de trabalho.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <img src="assets/public/icons/fc828.png" alt="" class="benefit-icon">
+                    <div class="benefit-content">
+                        <h3>Metodologias Profissionais</h3>
+                        <p>Adote processos estruturados de pentest, não apenas "truques" soltos.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <img src="assets/public/icons/fc1084.png" alt="" class="benefit-icon">
+                    <div class="benefit-content">
+                        <h3>Guia Estruturado</h3>
+                        <p>Economize meses de estudo perdido com um roteiro linear e lógico.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <img src="assets/public/icons/fc857.png" alt="" class="benefit-icon">
+                    <div class="benefit-content">
+                        <h3>Base para Carreira</h3>
+                        <p>O alicerce sólido para quem busca certificações e vagas em Cyber.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.6 CREATOR PROFILE - CRT TERMINAL STYLE -->
+    <section class="creator-terminal">
+
+        <div class="container">
+            <div class="crt-monitor">
+                <!-- Scanline overlay -->
+                <div class="crt-scanline"></div>
+
+                <!-- Terminal Header -->
+                <div class="crt-header">
+                    <span class="crt-title">[CREATOR PROFILE]</span>
+                    <div class="crt-status-bar">
+                        <span class="status-item status-secondary">STATUS: <span class="text-green">ONLINE</span></span>
+                        <span class="status-item status-primary">LEVEL: <span class="level-badge">SENIOR</span></span>
+                        <span class="status-item status-secondary">CLASS: <span class="text-green">SECURITY
+                                ENGINEER</span></span>
+                    </div>
+                </div>
+
+                <!-- Terminal Body -->
+                <div class="crt-body">
+                    <!-- Profile Window -->
+                    <div class="crt-profile-window">
+                        <div class="window-header">
+                            <span class="window-title">profile.png</span>
+                            <span class="window-controls">[-][□][×]</span>
+                        </div>
+                        <div class="window-content">
+                            <img src="Mockups/eu2.png" alt="Caio Henrique" class="creator-photo">
+                        </div>
+                    </div>
+
+                    <!-- Data Panel -->
+                    <div class="crt-data-panel">
+                        <div class="data-line data-id">
+                            <span class="data-key">ID:</span>
+                            <span class="data-value data-value-dim">#CH-SEC-001</span>
+                        </div>
+                        <div class="data-line data-primary">
+                            <span class="data-key">NAME:</span>
+                            <span class="data-value data-value-name">CAIO HENRIQUE</span>
+                        </div>
+                        <div class="data-line">
+                            <span class="data-key">ROLE:</span>
+                            <span class="data-value">DEVSECOPS ENGINEER</span>
+                        </div>
+                        <div class="data-line">
+                            <span class="data-key">XP:</span>
+                            <span class="data-value">6+ YEARS IN CYBERSECURITY</span>
+                        </div>
+
+                        <!-- Skills Grid -->
+                        <div class="creator-stats">
+                            <div class="stat-block">
+                                <img src="assets/public/icons/fc854.png" alt="" class="stat-icon">
+                                <span class="stat-text">Proteção de infraestruturas reais</span>
+                            </div>
+                            <div class="stat-block">
+                                <img src="assets/public/icons/fc665.png" alt="" class="stat-icon">
+                                <span class="stat-text">Mentalidade hacker</span>
+                            </div>
+                            <div class="stat-block">
+                                <img src="assets/public/icons/fc857.png" alt="" class="stat-icon">
+                                <span class="stat-text">DevSecOps na prática</span>
+                            </div>
+                            <div class="stat-block">
+                                <img src="assets/public/icons/fc1084.png" alt="" class="stat-icon">
+                                <span class="stat-text">Criador do manual</span>
+                            </div>
+                        </div>
+
+                        <!-- Terminal Message -->
+                        <div class="terminal-output">
+                            <span class="prompt">&gt;</span> Manual criado para ser o que eu gostaria de ter tido quando
+                            comecei.<span class="cursor-blink">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.7 ITEM DE INVENTÁRIO - Seção de Compra RPG Style -->
+    <section class="unlock-section">
+        <div class="container">
+            <div class="unlock-card">
+                <!-- Header do Item -->
+                <div class="unlock-header">
+                    <img src="assets/public/icons/fc12.png" alt="★" class="fc-icon header-icon">
+                    <span class="unlock-label">[ITEM RARO]</span>
+                </div>
+                <h2 class="unlock-title">MANUAL: ETHICAL HACKING</h2>
+
+                <!-- Container Principal (2 colunas) -->
+                <div class="unlock-content">
+                    <!-- Coluna Esquerda: Visual do Item -->
+                    <div class="unlock-visual">
+                        <div class="item-frame">
+                            <img src="Mockups/capa_manual.png" alt="Manual Ethical Hacking" class="item-img">
+                        </div>
+                    </div>
+
+                    <!-- Coluna Direita: Stats + Ação -->
+                    <div class="unlock-stats">
+                        <!-- Atributos do Item (Stats RPG) -->
+                        <div class="stats-block">
+                            <span class="stats-label">[STATS]</span>
+                            <ul class="stats-list">
+                                <li>
+                                    <img src="assets/public/icons/fc10.png" alt="" class="fc-icon">
+                                    <span class="stat-name">Conhecimento prático</span>
+                                    <span class="stat-type">[+]</span>
+                                </li>
+                                <li>
+                                    <img src="assets/public/icons/fc71.png" alt="" class="fc-icon">
+                                    <span class="stat-name">Acesso vitalício</span>
+                                    <span class="stat-type passive">[PASSIVE]</span>
+                                </li>
+                                <li>
+                                    <img src="assets/public/icons/fc82.png" alt="" class="fc-icon">
+                                    <span class="stat-name">Conteúdo direto ao ponto</span>
+                                    <span class="stat-type">[+]</span>
+                                </li>
+                                <li>
+                                    <img src="assets/public/icons/fc85.png" alt="" class="fc-icon">
+                                    <span class="stat-name">Laboratórios reais</span>
+                                    <span class="stat-type active">[ACTIVE]</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Custo de Desbloqueio -->
+                        <div class="cost-block">
+                            <span class="cost-label">UNLOCK COST:</span>
+                            <div class="cost-value">
+                                <span class="cost-old">R$ 79,90</span>
+                                <span class="cost-current">R$ 49,90</span>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação do Item -->
+                        <div class="item-rating">
+                            <div class="rating-stars">
+                                <img src="assets/public/icons/fc12.png" alt="★" class="fc-icon star-icon">
+                                <img src="assets/public/icons/fc12.png" alt="★" class="fc-icon star-icon">
+                                <img src="assets/public/icons/fc12.png" alt="★" class="fc-icon star-icon">
+                                <img src="assets/public/icons/fc12.png" alt="★" class="fc-icon star-icon">
+                                <img src="assets/public/icons/fc12.png" alt="★" class="fc-icon star-icon">
+                            </div>
+                            <span class="rating-label">Recomendado para iniciantes</span>
+                        </div>
+
+                        <!-- Botão CTA -->
+                        <a href="https://payfast.greenn.com.br/123320" class="unlock-btn">
+                            <span class="btn-icon">▶</span> UNLOCK ITEM
+                        </a>
+                        <span class="unlock-microcopy">acesso imediato após desbloqueio</span>
+                    </div>
+                </div>
+
+                <!-- Rodapé do Card - Status Passivos -->
+                <div class="unlock-footer">
+                    <span class="status-passive">
+                        <img src="assets/public/icons/fc72.png" alt="" class="fc-icon footer-icon">
+                        Pagamento seguro
+                    </span>
+                    <span class="status-passive">
+                        <img src="assets/public/icons/fc80.png" alt="" class="fc-icon footer-icon">
+                        Acesso imediato
+                    </span>
+                    <span class="status-passive">
+                        <img src="assets/public/icons/fc64.png" alt="" class="fc-icon footer-icon">
+                        Sem mensalidade
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.8 GARANTIA - Após o card de compra -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <!-- Escudo Pixelart - Proteção / Segurança -->
+                <div class="guarantee-shield">
+                    <img src="assets/public/icons/fc854.png" alt="Escudo" class="shield-icon">
+                </div>
+
+                <!-- Título -->
+                <h3 class="guarantee-title">GARANTIA INCONDICIONAL DE 7 DIAS</h3>
+
+                <!-- Texto Descritivo -->
+                <p class="guarantee-desc">
+                    Se o conteúdo não for o que você espera,<br>
+                    devolvemos 100% do seu dinheiro.<br><br>
+                    <strong>Sem perguntas. Sem risco.</strong>
+                </p>
+
+                <!-- Selo de Confiança -->
+                <span class="guarantee-seal">
+                    <img src="assets/public/icons/fc72.png" alt="" class="seal-icon"> Compra 100% segura
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7.9 FAQ - PERGUNTAS FREQUENTES -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title shiny-pixel-title" data-text="PERGUNTAS FREQUENTES">PERGUNTAS FREQUENTES</h2>
+            <p class="faq-subtitle">Tire suas dúvidas sobre o Manual de Ethical Hacking</p>
+
+            <div class="faq-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-icon">></span>
+                        <span>Quando recebo acesso ao Manual?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>O acesso é liberado imediatamente após a confirmação do pagamento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-icon">></span>
+                        <span>O manual é indicado para iniciantes?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Sim. O conteúdo começa do zero e evolui de forma prática e estruturada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-icon">></span>
+                        <span>Preciso ter conhecimento prévio em programação?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Não. Conhecimentos básicos ajudam, mas não são obrigatórios.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-icon">></span>
+                        <span>O conteúdo é mais teórico ou prático?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>O foco é totalmente prático, com ferramentas e cenários reais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-icon">></span>
+                        <span>Existe garantia?</span>
+                        <span class="faq-arrow">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Sim. Garantia incondicional de 7 dias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-col">
+                    <h3 class="footer-brand typing-brand"><span class="brand-text"></span><span
+                            class="typing-cursor">_</span></h3>
+                    <p class="footer-tagline">Cybersecurity e Ethical Hacking na prática.</p>
+                </div>
+
+                <!-- Coluna 2: Contato -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/chdevsec" target="_blank"><span class="link-icon">→</span>
+                                GitHub</a></li>
+                        <li><a href="https://www.instagram.com/chdevsec/" target="_blank"><span
+                                    class="link-icon">→</span> Instagram</a></li>
+                        <li><a href="mailto:chdevsec@gmail.com"><span class="link-icon">→</span> chdevsec@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Links Úteis -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Links Úteis</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><span class="link-icon">→</span> Termos de Uso</a></li>
+                        <li><a href="#"><span class="link-icon">→</span> Política de Privacidade</a></li>
+                        <li><a href="#"><span class="link-icon">→</span> Suporte</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rodapé Final -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 CHDEVSEC — Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Matrix Rain Script - Sutil para Benefits Section -->
+    <script>
+        (function () {
+            const canvas = document.getElementById('matrix-rain');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const section = canvas.closest('.benefits');
+
+            // Configurações sutis
+            const fontSize = 12;
+            const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01';
+
+            let columns, drops;
+
+            function resize() {
+                canvas.width = section.offsetWidth;
+                canvas.height = section.offsetHeight;
+                columns = Math.floor(canvas.width / fontSize);
+                drops = Array(columns).fill(1);
+            }
+
+            function draw() {
+                // Fade muito sutil (menos traços)
+                ctx.fillStyle = 'rgba(5, 5, 5, 0.08)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // Cor verde com opacidade MUITO baixa
+                ctx.fillStyle = 'rgba(0, 255, 85, 0.12)';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    // Só desenha 1 em cada 3 colunas (menos denso)
+                    if (i % 3 !== 0) continue;
+
+                    const char = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+                    // Reset aleatório (mais lento)
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) {
+                        drops[i] = 0;
+                    }
+                    drops[i] += 0.5; // Velocidade lenta
+                }
+            }
+
+            resize();
+            window.addEventListener('resize', resize);
+
+            // Animação lenta (30fps)
+            setInterval(draw, 50);
+        })();
+    </script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+        (function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    // Fecha todos os outros
+                    faqItems.forEach(other => {
+                        if (other !== item) {
+                            other.classList.remove('active');
+                            other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+
+                    // Toggle do item clicado
+                    item.classList.toggle('active');
+                    const isExpanded = item.classList.contains('active');
+                    question.setAttribute('aria-expanded', isExpanded);
+                });
+            });
+        })();
+    </script>
+
+    <!-- Footer Brand Typing Animation -->
+    <script>
+        (function () {
+            const brandText = document.querySelector('.brand-text');
+            if (!brandText) return;
+
+            const text = 'CHDEVSEC';
+            let index = 0;
+
+            function typeChar() {
+                if (index < text.length) {
+                    brandText.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeChar, 120 + Math.random() * 80);
+                }
+            }
+
+            // Inicia a digitação após um pequeno delay
+            setTimeout(typeChar, 500);
+        })();
+    </script>
+
+    <!-- Loading Screen Script -->
+    <script>
+        (function () {
+            const loadingScreen = document.getElementById('loading-screen');
+            const loadingLabel = document.querySelector('.loading-label');
+            const loadingBar = document.querySelector('.loading-bar');
+            const loadingTip = document.querySelector('.loading-tip');
+
+            if (!loadingScreen || !loadingLabel || !loadingBar) return;
+
+            const messages = [
+                'Initializing system...',
+                'Loading modules...',
+                'Connecting to server...',
+                'Preparing environment...',
+                'System ready.'
+            ];
+
+            let msgIndex = 0;
+            let charIndex = 0;
+            let progress = 0;
+            let isComplete = false;
+
+            // Efeito de digitação
+            function typeMessage() {
+                if (msgIndex >= messages.length) {
+                    isComplete = true;
+                    loadingTip.textContent = '> Press any key to start...';
+                    loadingTip.style.color = 'var(--accent-green)';
+                    return;
+                }
+
+                const currentMsg = messages[msgIndex];
+
+                if (charIndex < currentMsg.length) {
+                    loadingLabel.textContent = currentMsg.substring(0, charIndex + 1);
+                    charIndex++;
+                    setTimeout(typeMessage, 25 + Math.random() * 15);
+                } else {
+                    // Próxima mensagem
+                    setTimeout(() => {
+                        msgIndex++;
+                        charIndex = 0;
+                        progress = Math.min(100, (msgIndex / messages.length) * 100);
+                        loadingBar.style.width = progress + '%';
+                        typeMessage();
+                    }, 100);
+                }
+            }
+
+            // Fechar loading
+            function closeLoading() {
+                if (!isComplete) return;
+                loadingScreen.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            // Event listeners
+            document.addEventListener('keydown', closeLoading);
+            document.addEventListener('click', closeLoading);
+            document.addEventListener('touchstart', closeLoading);
+
+            // Auto-close após 2.5 segundos
+            setTimeout(() => {
+                isComplete = true;
+                closeLoading();
+            }, 2500);
+
+            // Prevenir scroll durante loading
+            document.body.style.overflow = 'hidden';
+
+            // Iniciar
+            setTimeout(typeMessage, 300);
+        })();
+    </script>
+
+</body>
+
+</html>
